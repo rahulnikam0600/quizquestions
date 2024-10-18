@@ -18,4 +18,10 @@ public class QuestionService {
 		// TODO Auto-generated method stub
 		return questionDao.findAll();
 	}
+	
+
+	public List<Question> getQuestionsByCategory(String cat) {
+		// TODO Auto-generated method stub
+		return questionDao.findByCategory(cat);
+	}
 }
