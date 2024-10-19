@@ -1,18 +1,15 @@
 package com.telusco.quizapp.model;
 
-
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
-@Entity(name = "quizquestions")
-public class Question {
+@Builder
+public class QuestionWrapper {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
 	private String question;
@@ -25,10 +22,4 @@ public class Question {
 	
 	private String option4;
 	
-	private String correctAnswer;
-	
-	private String difficultyLevel;
-	
-	private String category;
-		
 }
